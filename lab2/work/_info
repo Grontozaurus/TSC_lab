@@ -1,0 +1,142 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2
+T_opt
+!s110 1614872228
+VLLgLOOmA2aLk3E4P7L6kI0
+04 3 4 work top fast 0
+=1-54e1ad9ce65f-6040fea4-19-2560
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6d;65
+vinstr_register
+Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z3 DXx4 work 18 instr_register_pkg 0 22 FBeIG>mO6=a`R7jb>9WYP0
+Z4 !s110 1614872224
+!i10b 1
+!s100 dB^k@BKhNZTOZmVmIGTYY2
+I@M_KP^eZz>c0Ql8E4gPeD1
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+!s105 instr_register_sv_unit
+S1
+R0
+w1614777442
+8C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab_dut/instr_register.sv
+FC:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab_dut/instr_register.sv
+L0 9
+Z6 OL;L;10.6d;65
+r1
+!s85 0
+31
+Z7 !s108 1614872224.000000
+!s107 C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab_dut/instr_register.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab_dut/instr_register.sv|
+!i113 0
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+Xinstr_register_pkg
+R2
+R4
+!i10b 1
+!s100 [7MWzRQElN=K:L=c[d:9C0
+IFBeIG>mO6=a`R7jb>9WYP0
+VFBeIG>mO6=a`R7jb>9WYP0
+S1
+R0
+w1614777450
+8C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab_dut/instr_register_pkg.sv
+FC:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab_dut/instr_register_pkg.sv
+L0 5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab_dut/instr_register_pkg.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab_dut/instr_register_pkg.sv|
+!i113 0
+R8
+R1
+vinstr_register_test
+R2
+R3
+Z9 !s110 1614872191
+!i10b 1
+!s100 @N=XOV`;[WWiI<;VY_SjA2
+IZR^A<INT=ecob?]jPjG;n2
+R5
+!s105 instr_register_test_sv_unit
+S1
+R0
+w1614871887
+8C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab01_testbench-interface/instr_register_test.sv
+FC:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab01_testbench-interface/instr_register_test.sv
+L0 8
+R6
+r1
+!s85 0
+31
+Z10 !s108 1614872191.000000
+!s107 C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab01_testbench-interface/instr_register_test.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab01_testbench-interface/instr_register_test.sv|
+!i113 0
+R8
+R1
+Ytb_ifc
+R2
+R3
+R9
+!i10b 1
+!s100 2M_?`Y^B`0W]3NOQc2PfC1
+I^QI8;2jOXz1V55[RjAA>K1
+R5
+!s105 tb_ifc_sv_unit
+S1
+R0
+w1614871758
+8C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab01_testbench-interface/tb_ifc.sv
+FC:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab01_testbench-interface/tb_ifc.sv
+L0 5
+R6
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab01_testbench-interface/tb_ifc.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab01_testbench-interface/tb_ifc.sv|
+!i113 0
+R8
+R1
+vtop
+R2
+R3
+R9
+!i10b 1
+!s100 [9zVn4kNS<XhcXUYWW:X^3
+IFRP_CNHXY:<8=FUJNB6o^1
+R5
+!s105 top_sv_unit
+S1
+R0
+w1614872061
+8C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab01_testbench-interface/top.sv
+FC:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab01_testbench-interface/top.sv
+L0 5
+R6
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab01_testbench-interface/top.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/Moglan Andrei/Desktop/TSC/Laborator 2/lab2/lab01_testbench-interface/top.sv|
+!i113 0
+R8
+R1
