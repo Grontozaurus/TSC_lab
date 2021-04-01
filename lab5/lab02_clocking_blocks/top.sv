@@ -18,7 +18,7 @@ module top;
   logic test_clk;
 
  // instantiate the testbench interface
-  tb_ifc io (.clk(test_clk));
+  tb_ifc io (.clk(clk));
 
   // connect interface to testbench
   instr_register_test test (.io(io));
