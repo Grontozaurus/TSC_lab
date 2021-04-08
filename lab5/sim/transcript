@@ -15,34 +15,33 @@
 # do run.do
 # 1
 # Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 17:53:01 on Apr 01,2021
+# Start time: 17:38:47 on Apr 08,2021
 # vlog -reportprogress 300 -sv -timescale 1ps/1ps -work work -f sources.txt 
 # -- Compiling package instr_register_pkg
 # -- Compiling module instr_register
 # -- Importing package instr_register_pkg
 # -- Compiling interface tb_ifc
 # -- Compiling module instr_register_test
+# ** Warning: ../lab02_clocking_blocks/instr_register_test.sv(127): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ../lab02_clocking_blocks/instr_register_test.sv(128): (vlog-2240) Treating stand-alone use of function 'assign_signal' as an implicit VOID cast.
+# ** Warning: ../lab02_clocking_blocks/instr_register_test.sv(143): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ../lab02_clocking_blocks/instr_register_test.sv(144): (vlog-2240) Treating stand-alone use of function 'assign_signal' as an implicit VOID cast.
 # -- Compiling module top
 # 
 # Top level modules:
 # 	top
-# End time: 17:53:01 on Apr 01,2021, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# End time: 17:38:47 on Apr 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
 # vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top 
-# Start time: 17:53:01 on Apr 01,2021
+# Start time: 17:38:47 on Apr 08,2021
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
-# Refreshing C:/Users/Moglan Andrei/Desktop/TSC_lab/lab5/sim/work.top
-# Refreshing C:/Users/Moglan Andrei/Desktop/TSC_lab/lab5/sim/work.instr_register_pkg
-# Refreshing C:/Users/Moglan Andrei/Desktop/TSC_lab/lab5/sim/work.tb_ifc
-# Refreshing C:/Users/Moglan Andrei/Desktop/TSC_lab/lab5/sim/work.instr_register_test
-# Refreshing C:/Users/Moglan Andrei/Desktop/TSC_lab/lab5/sim/work.instr_register
+# Refreshing C:/Users/Moglan Andrei/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/andreimoglan/TSC_lab/lab5/sim/work.top
+# Refreshing C:/Users/Moglan Andrei/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/andreimoglan/TSC_lab/lab5/sim/work.instr_register_pkg
+# Refreshing C:/Users/Moglan Andrei/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/andreimoglan/TSC_lab/lab5/sim/work.tb_ifc
+# Refreshing C:/Users/Moglan Andrei/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/andreimoglan/TSC_lab/lab5/sim/work.instr_register_test
+# Refreshing C:/Users/Moglan Andrei/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/andreimoglan/TSC_lab/lab5/sim/work.instr_register
 # ** Warning: (vsim-3839) ../lab02_clocking_blocks/tb_ifc.sv(22): Variable '/top/io/instruction_word', driven via a port connection, is multiply driven. See ../lab02_clocking_blocks/top.sv(27).
 #    Time: 0 ns  Iteration: 0  Instance: /top/io File: ../lab02_clocking_blocks/tb_ifc.sv
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Moglan Andrei  Hostname: DESKTOP-BBL29C9  ProcessID: 8680
-#           Attempting to use alternate WLF file "./wlftgg55rh".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftgg55rh
 # 
 # 
 # ***********************************************************
@@ -54,20 +53,38 @@
 # Reseting the instruction register...
 # 
 # Writing values to register stack...
-# Writing to register location 0: 
-#   opcode = 1 (PASSA)
+# Writing to register location x: 
+#   opcode = 6 (DIV)
 #   operand_a = -12
 #   operand_b = 7
 # 
-# Writing to register location 1: 
-#   opcode = 0 (ZERO)
-#   operand_a = -9
+# Writing to register location x: 
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# 
+# Writing to register location x: 
+#   opcode = 6 (DIV)
+#   operand_a = 14
 #   operand_b = 1
 # 
-# Writing to register location 2: 
+# Sunt in clasa transaction extends
+# Writing to register location x: 
+#   opcode = 5 (MULT)
+#   operand_a = -3
+#   operand_b = 10
+# 
+# Sunt in clasa transaction extends
+# Writing to register location x: 
 #   opcode = 7 (MOD)
-#   operand_a = -15
-#   operand_b = 8
+#   operand_a = 15
+#   operand_b = 11
+# 
+# Sunt in clasa transaction extends
+# Writing to register location x: 
+#   opcode = 4 (SUB)
+#   operand_a = -13
+#   operand_b = 14
 # 
 # 
 # Reading back the same register locations written...
@@ -86,17 +103,32 @@
 #   operand_a = x
 #   operand_b = x
 # 
+# Read from register location 31: 
+#   opcode = x ()
+#   operand_a = x
+#   operand_b = x
 # 
-# ***********************************************************
-# *  THIS IS NOT A SELF-CHECKING TESTBENCH (YET).  YOU  *
-# *  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES     *
-# *  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  *
-# ***********************************************************
+# Read from register location 31: 
+#   opcode = x ()
+#   operand_a = x
+#   operand_b = x
 # 
-# ** Note: $finish    : ../lab02_clocking_blocks/instr_register_test.sv(161)
-#    Time: 165 ns  Iteration: 2  Instance: /top/test
+# Read from register location 31: 
+#   opcode = x ()
+#   operand_a = x
+#   operand_b = x
+# 
+# Read from register location 31: 
+#   opcode = x ()
+#   operand_a = x
+#   operand_b = x
+# 
+# ** Note: $finish    : ../lab02_clocking_blocks/instr_register_test.sv(273)
+#    Time: 275 ns  Iteration: 2  Instance: /top/test
 # 1
-# Break in Module instr_register_test at ../lab02_clocking_blocks/instr_register_test.sv line 161
+# Break in Module instr_register_test at ../lab02_clocking_blocks/instr_register_test.sv line 273
 # Simulation Breakpoint: 1
-# Break in Module instr_register_test at ../lab02_clocking_blocks/instr_register_test.sv line 161
+# Break in Module instr_register_test at ../lab02_clocking_blocks/instr_register_test.sv line 273
 # MACRO ./run.do PAUSED at line 45
+# End time: 17:39:35 on Apr 08,2021, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 2
