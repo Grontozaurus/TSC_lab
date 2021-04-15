@@ -86,10 +86,15 @@ module instr_register_test (tb_ifc io);  // interface port
 	
 	cov_1: coverpoint vifc.cb.operand_a{
 		bins val_operand_a[] = {[-15:15]};
+		bins val_operand_a15 = {15};
+		bins val_operand_az = {0};
+		bins val_operand_am15 = {-15};
 	}
 	
 	cov_2: coverpoint vifc.cb.operand_b{
-		bins val_operand_b[] = {[0:15]};
+		bins val_operand_b[] = {[1:15]};
+		bins val_operand_bz  = {0};
+		bins val_operand_b15 = {15};
 	}
 	
 	cov_3: coverpoint vifc.cb.operand_a{
@@ -101,6 +106,50 @@ module instr_register_test (tb_ifc io);  // interface port
 	cov_4: cross cov_0, cov_3{
 		ignore_bins ignore_poz = binsof(cov_3.val_poz);
 	}
+	
+	cov_5: cross cov_0, cov_3{
+		ignore_bins ignore_neg = binsof(cov_3.val_neg);
+	}
+	
+	
+	cov_6: cross cov_0, cov_1{
+		ignore_bins ignore_nazero =  binsof(cov_1.val_operand_a) ;
+		ignore_bins ignore_15azero = binsof(cov_1.val_operand_a15);
+	}
+	
+	cov_7: cross cov_0, cov_2{
+		ignore_bins ignore_nbzero =  binsof(cov_2.val_operand_b) ;
+		ignore_bins ignore_15bzero = binsof(cov_2.val_operand_b15);
+	}
+	
+	cov_8: cross cov_0, cov_1, cov_2{
+		ignore_bins ignore_za = binsof(cov_1.val_operand_az);
+		ignore_bins ignore_minsa =  binsof(cov_1.val_operand_a) ;
+		ignore_bins ignore_minsb =  binsof(cov_2.val_operand_b) ;	
+		ignore_bins ignore_nb =  binsof(cov_2.val_operand_bz) ;		
+	}
+	
+	cov_9: cross cov_0, cov_1, cov_2{
+		ignore_bins ignore_nbzero =  binsof(cov_2.val_operand_b) ;
+		ignore_bins ignore_15bzero = binsof(cov_2.val_operand_b15);
+		ignore_bins ignore_nazero =  binsof(cov_1.val_operand_a) ;
+		ignore_bins ignore_15azero = binsof(cov_1.val_operand_a15);
+		ignore_bins ignore_za = binsof(cov_1.val_operand_az);
+	}
+	
+	cov_10: cross cov_0, cov_2{
+		ignore_bins ignore_val1 = binsof(cov_0.val_zero);
+		ignore_bins ignore_val2 = binsof(cov_0.val_passa);
+		ignore_bins ignore_val3 = binsof(cov_0.val_passb);
+		ignore_bins ignore_val4 = binsof(cov_0.val_sub);
+		ignore_bins ignore_val5 = binsof(cov_0.val_add);
+		ignore_bins ignore_val6 = binsof(cov_0.val_mult);
+		ignore_bins ignore_nbzero =  binsof(cov_2.val_operand_b) ;
+		ignore_bins ignore_15bzero = binsof(cov_2.val_operand_b15);	
+	
+	}
+
+	
 	
 	
 	endgroup
@@ -159,7 +208,7 @@ module instr_register_test (tb_ifc io);  // interface port
 		 
 		@( vifc.cb) vifc.cb.load_en <= 1'b1;  // enable writing to register
 		
-		repeat (12) begin
+		repeat (10000) begin
 		@(vifc.cb) tr.randomize();
 		assign_signal();
 		//vifc.cb.operand_a <= tr.operand_a;
@@ -176,7 +225,7 @@ module instr_register_test (tb_ifc io);  // interface port
 		tr = tr_ext;
 		
 		
-		repeat (12) begin
+		repeat (10000) begin
 		@(vifc.cb) tr.randomize();
 		assign_signal();
 		//vifc.cb.operand_a <= tr.operand_a;
